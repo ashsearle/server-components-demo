@@ -19,14 +19,13 @@ services:
       - postgres
     ports:
       - '4000:4000'
-    network_mode: host
     volumes:
     - ./notes:/opt/notes-app/notes
     - ./public:/opt/notes-app/public
     - ./scripts:/opt/notes-app/scripts
     - ./server:/opt/notes-app/server
     - ./src:/opt/notes-app/src
-    - ./credentials.json:/opt/notes-app/credentials.json
+    - ./credentials.docker-compose.json:/opt/notes-app/credentials.json
 
 volumes:
   db:
